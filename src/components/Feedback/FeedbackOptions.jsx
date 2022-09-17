@@ -1,7 +1,13 @@
 import React from "react"
-
+import PropTypes from "prop-types";
+import { FeedbackWrapper,OptionButton } from "./FeedbackOptions.styled"
 export const FeedbackOptions = ({options,onLeaveFeedback}) => {
-    return (<div> {options.map((option, index) =>
-    { return <button key={index} type="button" onClick={()=>onLeaveFeedback(option)}>{option}</button> })}
-            </div>)
+    return (<FeedbackWrapper> {options.map((option, index) =>
+    { return <OptionButton key={index} type="button" onClick={()=>onLeaveFeedback(option)}>{option}</OptionButton> })}
+            </FeedbackWrapper>)
+}
+FeedbackOptions.propTypes = {
+    options: PropTypes.arrayOf(PropTypes.string.isRequired),
+    onLeaveFeedback:PropTypes.func
+    
 }
