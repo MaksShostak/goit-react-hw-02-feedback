@@ -7,6 +7,7 @@ export const ComponentStat = styled.p`
     text-align: center;
     border-radius: ${props => props.theme.radii.lg};
     background-color: ${props => props.theme.colors.mycolor};
+    padding: ${props => props.theme.space[4]}px;
   }
 `;
 export const StatisticsTitle = styled.h2`
