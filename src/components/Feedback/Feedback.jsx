@@ -10,7 +10,8 @@ export class Feedback extends React.Component{
     state = {
         good: 0,
         neutral: 0,
-        bad: 0
+        bad: 0,
+        
     }
     
     // addFeedback = (option) => { 
@@ -24,7 +25,7 @@ export class Feedback extends React.Component{
        ({ [option]:prevState[option] + 1 })
        
        );
-       console.log(this.state[option]);
+    //    console.log(this.state[option]);
         
     };
  
@@ -37,7 +38,7 @@ export class Feedback extends React.Component{
     };
     countPositiveFeedbackPercentage = () => {
         const { good, neutral, bad } = this.state;
-        return Math.round(good * 100 / (good + bad + neutral))
+        return good===0?0:Math.round(good * 100 / (good + bad + neutral))
     };
    
     
