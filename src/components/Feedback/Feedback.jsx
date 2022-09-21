@@ -54,7 +54,7 @@ export class Feedback extends React.Component {
           />
           {/* {render && <Statistics good={good} bad={bad} neutral={neutral} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />} */}
           {/* !render */}
-          {this.countTotalFeedback() === 0 ? (
+          {!this.countTotalFeedback() ? (
             <Notification message={'There is no feedback'} />
           ) : (
             <Statistics
