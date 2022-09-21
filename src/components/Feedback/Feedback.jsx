@@ -27,10 +27,8 @@ export class Feedback extends React.Component {
     const totalFeedback = stateArr.reduce((total, state) => {
       return total + state;
     }, 0);
-    console.log(totalFeedback);
+    // console.log(totalFeedback);
     return totalFeedback;
-    // const { good, neutral, bad } = this.state;
-    // return good + bad + neutral;
   };
   countPositiveFeedbackPercentage = () => {
     const { good } = this.state;
@@ -52,7 +50,6 @@ export class Feedback extends React.Component {
             options={stateKeys}
             onLeaveFeedback={this.addFeedback}
           />
-          {/* {render && <Statistics good={good} bad={bad} neutral={neutral} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />} */}
           {/* !render */}
           {!this.countTotalFeedback() ? (
             <Notification message={'There is no feedback'} />
