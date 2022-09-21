@@ -51,7 +51,7 @@ export class Feedback extends React.Component {
             onLeaveFeedback={this.addFeedback}
           />
           {/* !render */}
-          {!this.countTotalFeedback() ? (
+          {this.countTotalFeedback() === 0 ? (
             <Notification message={'There is no feedback'} />
           ) : (
             <Statistics
